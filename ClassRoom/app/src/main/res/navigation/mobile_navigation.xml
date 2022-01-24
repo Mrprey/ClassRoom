@@ -3,23 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_mural">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.classroom.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_mural"
+        android:name="com.example.classroom.ui.mural.MuralFragment"
+        android:label="@string/title_mural"
+        tools:layout="@layout/fragment_mural" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.classroom.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_arquivos"
+        android:name="com.example.classroom.ui.arquivos.ArquivosFragment"
+        android:label="@string/title_arquivos"
+        tools:layout="@layout/fragment_arquivos" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.classroom.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_atividades"
+        android:name="com.example.classroom.ui.atividades.AtividadesFragment"
+        android:label="@string/title_atividades"
+        tools:layout="@layout/fragment_atividades" />
+
+    <fragment
+        android:id="@+id/navigation_pessoas"
+        android:name="com.example.classroom.ui.pessoas.PessoasFragment"
+        android:label="@string/title_pessoas"
+        tools:layout="@layout/fragment_pessoas" />
 </navigation>
