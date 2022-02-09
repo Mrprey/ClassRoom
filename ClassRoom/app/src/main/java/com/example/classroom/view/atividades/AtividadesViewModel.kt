@@ -1,4 +1,4 @@
-package com.example.classroom.ui.atividades
+package com.example.classroom.view.atividades
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

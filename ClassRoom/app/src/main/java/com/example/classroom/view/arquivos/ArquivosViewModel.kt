@@ -1,4 +1,4 @@
-package com.example.classroom.ui.arquivos
+package com.example.classroom.view.arquivos
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

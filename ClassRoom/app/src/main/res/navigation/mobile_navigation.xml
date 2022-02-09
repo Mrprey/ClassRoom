@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_mural"
-        android:name="com.example.classroom.ui.mural.MuralFragment"
+        android:name="com.example.classroom.view.mural.MuralFragment"
         android:label="@string/title_mural"
         tools:layout="@layout/fragment_mural" />
 
     <fragment
         android:id="@+id/navigation_arquivos"
-        android:name="com.example.classroom.ui.arquivos.ArquivosFragment"
+        android:name="com.example.classroom.view.arquivos.ArquivosFragment"
         android:label="@string/title_arquivos"
         tools:layout="@layout/fragment_arquivos" />
 
     <fragment
         android:id="@+id/navigation_atividades"
-        android:name="com.example.classroom.ui.atividades.AtividadesFragment"
+        android:name="com.example.classroom.view.atividades.AtividadesFragment"
         android:label="@string/title_atividades"
         tools:layout="@layout/fragment_atividades" />
 
     <fragment
         android:id="@+id/navigation_pessoas"
-        android:name="com.example.classroom.ui.pessoas.PessoasFragment"
+        android:name="com.example.classroom.view.pessoas.PessoasFragment"
         android:label="@string/title_pessoas"
         tools:layout="@layout/fragment_pessoas" />
 </navigation>
