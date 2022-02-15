@@ -1,4 +1,4 @@
-package com.example.classroom.view
+package com.example.classroom.view.dataAdapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,26 +7,25 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.classroom.R
-import com.example.classroom.dba.MockData
 
-class DataAdapterView (private val data: List<MockData>) : RecyclerView.Adapter<DataAdapterView.IssueViewHolder>() {
+class DataAdapter(private val data: MutableList<String>) : RecyclerView.Adapter<DataAdapter.DataViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IssueViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_list, parent, false)
-        return IssueViewHolder(view)
+        return DataViewHolder(view)
     }
 
     override fun getItemCount() = data.size
 
-    override fun onBindViewHolder(holder: IssueViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         holder.bind(data[position])
     }
 
-    inner class IssueViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        var cardView = this.itemView.findViewById<CardView>(R.id.cv_Titulo)
-        fun bind(example: MockData) {
+    inner class DataViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+        //var cardView = this.itemView.findViewById<CardView>(R.id.cv_Titulo)
+        fun bind(example: String) {
             var textView_title = this.itemView.findViewById<TextView>(R.id.tv_textTitulo)
-            textView_title.text = example.description
+            textView_title.text = example
             //set ImageView people
            // var imageView_status = this.itemView.findViewById<ImageView>(R.id.iv_status)
         }

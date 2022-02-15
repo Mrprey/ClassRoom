@@ -27,21 +27,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar))
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-/*        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_mural, R.id.navigation_arquivos, R.id.navigation_atividades,
-                R.id.navigation_pessoas
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)*/
+
         navView.setupWithNavController(navController)
     }
-/*    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.bottom_nav_menu, menu)
-        return true
-    }*/
-
 }
