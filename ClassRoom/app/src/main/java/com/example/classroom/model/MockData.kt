@@ -1,22 +1,32 @@
 package com.example.classroom.model
 
-data class MockData(
-    var name: String = "Neymar Jr",
-    var description: String = "Texto de mock para teste da aplicação"
-)
+abstract class MockData{
+    abstract var name: String
+    abstract var date: String
+    abstract var deadLine: String
+    abstract var description: String
+}
 
-data class MockDataIssue(
-    var name: String = "apresentar projeto",
-    var date: String = "10/02/2022",
-    var deadLine: String = "18/02/2022",
-)
+class MockDataIssue: MockData() {
+    override var description: String = "Slides da aula"
 
-data class MockDataFiles(
-    var name: String = "slides",
-    var date: String = "08/02/2022",
-    var description: String = "Slides da aula"
-)
+    override var name: String = "apresentar projeto"
+    override var date: String = "10/02/2022"
+    override var deadLine: String = "18/02/2022"
+}
 
-data class MockDataPeople(
-    var name: String = "Vini Jr"
-)
+class MockDataFiles: MockData() {
+    override var deadLine: String = "None"
+
+    override var name: String = "slides"
+    override var date: String = "08/02/2022"
+    override var description: String = "Slides da aula"
+}
+
+class MockDataPeople: MockData(){
+    override var date: String = "None"
+    override var deadLine: String = "None"
+    override var description: String = "None"
+
+    override var name: String = "Vini Jr"
+}

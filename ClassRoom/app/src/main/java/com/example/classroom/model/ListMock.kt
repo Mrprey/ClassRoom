@@ -1,10 +1,9 @@
 package com.example.classroom.model
 
-import kotlin.Exception as Exception
 
-class ListMock: StrategyAdd {
+class ListMock: StrategyAdd, Iterator {
     private var listMock : MutableList<MockData> = ArrayList()
-    private var next = 0
+    override var position: Int = 0;
 
     fun setList(data: MockData, num: Int) {
         super.setList(data, num, this.listMock)
@@ -18,10 +17,19 @@ class ListMock: StrategyAdd {
         super.setList(data, this.listMock)
     }
 
-    fun getList() = listMock
-
-    fun getItem(index: Int) = listMock[index]
-
     fun Size() = listMock.size
+
+    override fun reset() {
+        position = 0
+    }
+
+    override fun getNext(): MockData {
+        return listMock[position]
+    }
+
+    override fun hasMore(): Boolean {
+        position += 1
+        return position < Size()
+    }
 
 }

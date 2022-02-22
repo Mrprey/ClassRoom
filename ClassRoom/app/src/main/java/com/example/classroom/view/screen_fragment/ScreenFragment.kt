@@ -5,10 +5,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.classroom.controller.Controller
 
 abstract class ScreenFragment : Fragment() {
-    abstract var controlData : Controller
+    abstract val controlData : Controller
     abstract var recyclerView: RecyclerView
 
     abstract fun setupRecyclerView()
 
-    abstract fun setupController(size: Int)
+    abstract fun setupData(size: Int)
 }

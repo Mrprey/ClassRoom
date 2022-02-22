@@ -34,7 +34,6 @@
                 android:layout_height="32dp"
                 android:ems="10"
                 android:importantForAutofill="no"
-                android:text="Entrega: "
                 app:layout_constraintBottom_toBottomOf="@+id/tv_textTitle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.98"
